@@ -20,4 +20,4 @@ Known Limitations:
 Usage:
 ------
 
-`python studicli.py`
+`python studicli.py -h`
