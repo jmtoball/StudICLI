@@ -16,3 +16,8 @@ Known Limitations:
   is changed.
 * For unknwon reasons, university staff was unable to login. Testers
   welcome.
+
+Usage:
+------
+
+`python studicli.py`
