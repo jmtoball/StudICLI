@@ -5,6 +5,7 @@ __author__ = "Johannes Maximimilian Toball"
 __license__ = "by-sa"
 
 import re
+import unicodedata
 
 def br2nl(pqObject):
 	""" Replaces <br>-tags with newlines to maintain formatting when extracting the text from html."""
@@ -32,3 +33,9 @@ def selectId(type, max):
 			continue
 		success = True
 	return id
+
+def safeName(name):
+    name = unicode(name)
+    name = unicodedata.normalize('NFKD', name).encode('ascii', 'ignore')
+    name = unicode(re.sub('[^\w\s-]', '', name).strip().lower())
+    return re.sub('[-\s]+', '-', name)
