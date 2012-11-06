@@ -1,4 +1,4 @@
-StudI.CLI
+Stud.ICLI
 =========
 
 Requirements:
